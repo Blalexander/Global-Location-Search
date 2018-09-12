@@ -53,10 +53,10 @@ function printNewsResults(newsData) {
     let description = newsData.articles[i].description;
     let articleUrl = newsData.articles[i].url;
 
-    $('.newsContainer').append(`<h2>${title}</h2>
+    $('.newsContainer').append(`<h2 class="newsArticleTitle">${title}</h2>
     <h3>${sourceName}</h3>
     <p>${description}</p>
-    <a href="${articleUrl}" target="_blank">${articleUrl}</a>`);
+    <a href="${articleUrl}" target="_blank" class="newsArticleUrl">${articleUrl}</a>`);
   }
 }
 

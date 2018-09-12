@@ -39,21 +39,21 @@ form {
 #politicalMap {
   height: 30vh;
   width: 50vw;
-  border-radius: 50px;
+  border-radius: 500px;
 }
 
 #geographicMap {
   height: 30vh;
   width: 50vw;
-  border-radius: 50px;
+  border-radius: 500px;
 }
 
 .areaHistory {
   background-color: lightgrey;
   text-align: center;
-  width: 70vw;
+/*   width: 70vw; */
   border-radius: 5px;
-  display: inline-flex;
+/*   display: inline-flex; */
   justify-content: center;
 }
 
@@ -68,23 +68,29 @@ form {
 .pageChangeButtons {
   display: inline-flex;
   width: 99%;
-/*   flex-flow: row nowrap; */
   justify-content: center;
-  
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 .pageNumber {
-  width: 4vw;
-  font-size: large;
+  width: 10vw;
+  max-height: 8vh;
+  font-weight: bold;
   text-align: center;
   background-color: lightgray;
+  border-radius: 100%;
 }
 
 .nextPage, .previousPage {
   width: 40vw;
-  height: 8vh;
+  height: 4vh;
 }
 
+.newsArticleTitle {
+  border-top: 5px solid darkgray;
+  border-left: 10px solid darkgray;
+}
 
 @media only screen and (min-width:900px) {
   #politicalMap, #geographicMap {
@@ -93,8 +99,19 @@ form {
   }
 }
 
-/* @media only screen and (max-width:400px) {
-  .nextPage, .previousPage {
-
+@media only screen and (max-width:500px) {
+  .mapsContainer {
+    flex-flow: column wrap;
+    align-content: center;
   }
-} */
+  #politicalMap, #geographicMap {
+    height: 30vh;
+    width: 80vw;
+  }
+  .areaHistory {
+    width: 100%;
+  }
+  .nextPage, .previousPage {
+  height: 8vh;
+  }
+}
