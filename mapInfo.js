@@ -136,7 +136,6 @@ function geocodeAddress(geocoder) {
   };
 
   var goldStar2 = {
-    // path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
     path: 'M 5,-110 35,-25 125,-25 55,30 80,115 5,65 -70,115 -55,30 -115,-25 -25,-25 z',
     fillColor: 'yellow',
     fillOpacity: .1,
