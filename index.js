@@ -13,7 +13,17 @@ function getWiki(searchQuery, callback) {
   });
 }
 
-function displayWikiResults(wikiData) {
+function filterWikiResults(wikiData) {
+  if (wikiData[2][0].includes("may refer to")) {
+    $('.historyContainer').append(`<p>Uh oh!  There seems to be a few places with that name.</p>
+    <p>You can try making your search more specific, or clicking <a href="${wikiData[3][0]}" target="_blank">here</a> to see results on Wikipedia.</p>`);
+  }
+  else {
+    printWikiResults(wikiData);
+  }
+}
+
+function printWikiResults(wikiData) {
   let title = wikiData[1][0];
   let description = wikiData[2][0];
   let link = wikiData[3][0];
@@ -35,8 +45,7 @@ function getNews(searchQuery, callback) {
   });
 }
 
-//separate into two functions
-function displayNewsResults(newsData) {
+function filterNewsResults(newsData) {
   if (newsData.articles.length < 1) {
     $('.newsContainer').html("<h2>Sorry!  We couldn't find any news results for that search!</h2>");
   }
@@ -47,7 +56,7 @@ function displayNewsResults(newsData) {
 
 function printNewsResults(newsData) {
   $('.newsContainer').prepend(`<h1>Trending News:</h1>`);
-  for (var i=0; i<=newsData.articles.length; i++) { 
+  for (var i=0; i<newsData.articles.length; i++) { 
     let title = newsData.articles[i].title;
     let sourceName = newsData.articles[i].source.name;
     let description = newsData.articles[i].description;
@@ -63,12 +72,13 @@ function printNewsResults(newsData) {
 function handleSubmit() {
   //search news using raw input so results aren't as limited as a Wiki search
   input = document.querySelector('#addressBox').value;
-  getNews(input, displayNewsResults);
+  getNews(input, filterNewsResults);
 
   //reformat raw input to retrieve more accurate Wiki results
   let searchQuery = toTitleCase(input);
   searchQuery = searchQuery.replace(" ", "_");
-  getWiki(searchQuery, displayWikiResults);
+  searchQuery = searchQuery.replace(",", "");
+  getWiki(searchQuery, filterWikiResults);
 
   $('header').removeClass("centerOnLoad");
   $('.nextPage').removeClass("hideOnLoad");
@@ -88,7 +98,7 @@ $('.nextPage').on('click', function(e){
   e.preventDefault();
   $('.newsContainer').html(" ");
   newsPageNumber++;
-  getNews(input, displayNewsResults);
+  getNews(input, filterNewsResults);
   $('.pageNumber').removeClass("hideOnLoad");
   $('.pageNumber').html(`<p>${newsPageNumber}</p>`);
   if (newsPageNumber > 1) {
@@ -101,7 +111,7 @@ $('.previousPage').on('click', function(e){
   e.preventDefault();
   $('.newsContainer').html(" ");
   newsPageNumber--;
-  getNews(input, displayNewsResults);
+  getNews(input, filterNewsResults);
   $('.pageNumber').html(`<p>${newsPageNumber}</p>`);
   if (newsPageNumber === 1) {
     $('.previousPage').addClass("hideOnLoad");
@@ -109,15 +119,11 @@ $('.previousPage').on('click', function(e){
   }
 });
 
-//right now, the page number add/removeClass methods are nested in the next and previous page functions.  Should it be a standalone function?  what would be ways to implement that?
-
 //listener that starts Wiki and News searches
 document.getElementById('searchButton').addEventListener('click',  function (e) {
   e.preventDefault();
   handleSubmit();
 });
 
-
-//long load times.  load screen or animation to cover it up?
 
 //give credit to newsapi.org

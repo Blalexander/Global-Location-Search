@@ -10,7 +10,7 @@ function initMap() {
 }
 
 function geocodeAddress(geocoder) {
-  //styling definitions for political (left) map
+  //styling definitions for political (left/top) map
   var styledMapType = new google.maps.StyledMapType(
     [
       {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
@@ -139,18 +139,17 @@ function geocodeAddress(geocoder) {
     path: 'M 5,-110 35,-25 125,-25 55,30 80,115 5,65 -70,115 -55,30 -115,-25 -25,-25 z',
     fillColor: 'yellow',
     fillOpacity: .1,
-    scale: 1,
+    scale: .7,
     strokeColor: 'gold',
     strokeWeight: 2
   };
 
   //creates both maps 
   var map = new google.maps.Map(document.getElementById('politicalMap'), {
-    zoom: 8,
+    zoom: 6,
     center: { lat: -34.397, lng: 150.644 },
     disableDefaultUI: true,
     mapTypeId: 'styled_map'
-    // mapTypeId:google.maps.MapTypeId.ROADMAP
   });
   map.mapTypes.set('styled_map', styledMapType);
   map.setMapTypeId('styled_map');
@@ -159,7 +158,7 @@ function geocodeAddress(geocoder) {
     zoom: 14,
     center: { lat: -34.397, lng: 150.644 },
     disableDefaultUI: true,
-    mapTypeId:google.maps.MapTypeId.SATELLITE
+    mapTypeId:google.maps.MapTypeId.HYBRID
   });
 
   //pans camera to new location

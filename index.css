@@ -9,16 +9,18 @@
 } */
 
 body {
-  background-image: url('https://wallpapercave.com/wp/sYIlSxO.jpg');
-  background-repeat: no-repeat;
+  background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   height:100%;
 }
 
 header {
   text-align: center;
+}
+
+header, button {
+  color: white;
+  text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
 }
 
 .centerOnLoad {
@@ -31,7 +33,7 @@ form {
 
 .mapsContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 99%;
   height: 100%;
 }
@@ -39,13 +41,13 @@ form {
 #politicalMap {
   height: 30vh;
   width: 50vw;
-  border-radius: 500px;
+  border-radius: 500px 0px 0px 500px;
 }
 
 #geographicMap {
   height: 30vh;
   width: 50vw;
-  border-radius: 500px;
+  border-radius: 0px 500px 500px 0px;
 }
 
 .areaHistory {
@@ -107,6 +109,7 @@ form {
   #politicalMap, #geographicMap {
     height: 30vh;
     width: 80vw;
+    border-radius: 500px;
   }
   .areaHistory {
     width: 100%;
