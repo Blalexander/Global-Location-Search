@@ -18,9 +18,9 @@ header {
   text-align: center;
 }
 
-header, button {
-  color: white;
-  text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+header, button, h1 {
+  color: black;
+  text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white;
 }
 
 .centerOnLoad {
@@ -42,12 +42,14 @@ form {
   height: 30vh;
   width: 50vw;
   border-radius: 500px 0px 0px 500px;
+  border: 3px solid lightskyblue;
 }
 
 #geographicMap {
   height: 30vh;
   width: 50vw;
   border-radius: 0px 500px 500px 0px;
+  border: 3px solid lightskyblue;
 }
 
 .areaHistory {

@@ -13,6 +13,7 @@ function getWiki(searchQuery, callback) {
   });
 }
 
+//searches description given from API for Wiki's default phrase "may refer to" and replaces it with a more helpful explanation
 function filterWikiResults(wikiData) {
   if (wikiData[2][0].includes("may refer to")) {
     $('.historyContainer').append(`<p>Uh oh!  There seems to be a few places with that name.</p>
@@ -29,7 +30,7 @@ function printWikiResults(wikiData) {
   let link = wikiData[3][0];
   description = description.replace("( ( listen))", "");
 
-  $('.historyContainer').append(`<h2>${title}</h2>
+  $('.historyContainer').append(`<h1>${title}</h1>
   <p>${description}</p>
   <p><a href="${link}" target="_blank" class="wikiLink">Click here to read more about ${title}</a></p>`);
 }
@@ -45,6 +46,7 @@ function getNews(searchQuery, callback) {
   });
 }
 
+//checks to see if there is more than one result and prints a response if there is not
 function filterNewsResults(newsData) {
   if (newsData.articles.length < 1) {
     $('.newsContainer').html("<h2>Sorry!  We couldn't find any news results for that search!</h2>");
