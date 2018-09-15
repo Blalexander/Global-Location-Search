@@ -126,7 +126,7 @@ function geocodeAddress(geocoder) {
   });
 
   //custom marker styling
-  var goldStar = {
+  var smallStar = {
     path: 'M 5,-110 35,-25 125,-25 55,30 80,115 5,65 -70,115 -55,30 -115,-25 -25,-25 z',
     fillColor: 'yellow',
     fillOpacity: 1,
@@ -135,7 +135,7 @@ function geocodeAddress(geocoder) {
     strokeWeight: 2
   };
 
-  var goldStar2 = {
+  var largeStar = {
     path: 'M 5,-110 35,-25 125,-25 55,30 80,115 5,65 -70,115 -55,30 -115,-25 -25,-25 z',
     fillColor: 'yellow',
     fillOpacity: .1,
@@ -171,12 +171,12 @@ function geocodeAddress(geocoder) {
       var marker = new google.maps.Marker({
         map: map, 
         position: results[0].geometry.location,
-        icon: goldStar
+        icon: smallStar
       });
       var marker2 = new google.maps.Marker({
         map: map2, 
         position: results[0].geometry.location,
-        icon: goldStar2
+        icon: largeStar
       });
     } 
 

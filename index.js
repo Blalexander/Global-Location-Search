@@ -129,6 +129,7 @@ document.getElementById('searchButton').addEventListener('click',  function (e) 
   handleSubmit();
 });
 
+//controls the search bar static and fixed elements
 function sticktothetop() {
   var window_top = $(window).scrollTop();
   var top = $('#static-container').offset().top;
@@ -138,12 +139,9 @@ function sticktothetop() {
   } 
   else {
     $('.stickyContainer').removeClass('stick');
-    // $('#static-container').height(0);
   }
 }
 $(function() {
   $(window).scroll(sticktothetop);
   sticktothetop();
 });
-
-//give credit to newsapi.org

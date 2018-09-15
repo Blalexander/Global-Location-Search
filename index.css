@@ -1,3 +1,19 @@
+/* general--------------- */
+body {
+  background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height:100%;
+}
+
+/* header and search element styling--------------- */
+header {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
 .stickyContainer {
   text-align: center;
   width: 100%;
@@ -11,30 +27,8 @@
   text-align: center;
   z-index: 2;
 }
-  
-body {
-  background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
-  background-size: cover;
-  height:100%;
-}
 
-header {
-  text-align: center;
-}
-
-.highContrastText {
-  color: black;
-  text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white;
-}
-
-.centerOnLoad {
-  margin-top: 35vh;
-}
-
-form {
-  text-align: center;
-}
-
+/* map elements---------------- */
 .mapsContainer {
   display: flex;
   justify-content: center;
@@ -49,29 +43,31 @@ form {
   height: 30vh;
   width: 50vw;
   border-radius: 500px 0px 0px 500px;
-  /* border: 3px solid lightskyblue; */
 }
 
 #geographicMap {
   height: 30vh;
   width: 50vw;
   border-radius: 0px 500px 500px 0px;
-  /* border: 3px solid lightskyblue; */
 }
 
+/* Wiki location info--------------------  */
 .areaHistory {
   display: inline-flex;
   width: 100%;
   background-color: lightblue;
   text-align: center;
+  justify-content: center;
 }
 
+/* stylings for news articles and page selector--------------- */
 .currentEvents {
   background-color: lightblue;
 }
 
-.hideOnLoad {
-  display: none;
+.newsArticleTitle {
+  border-top: 5px solid darkgray;
+  border-left: 10px solid darkgray;
 }
 
 .pageChangeButtons {
@@ -96,11 +92,21 @@ form {
   height: 4vh;
 }
 
-.newsArticleTitle {
-  border-top: 5px solid darkgray;
-  border-left: 10px solid darkgray;
+/* misc. classes------------------------ */
+.highContrastText {
+  color: black;
+  text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white;
 }
 
+.hideOnLoad {
+  display: none;
+}
+
+.centerOnLoad {
+  margin-top: 35vh;
+}
+
+/* stylings for varying screen sizes------------------- */
 @media only screen and (min-width:900px) {
   #politicalMap, #geographicMap {
     height: 40vh;
