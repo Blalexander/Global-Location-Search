@@ -4,7 +4,7 @@
 
 
 ## Landing Page
-![Screenshot1] (https://raw.githubusercontent.com/Blalexander/Global-Location-Search/master/images/landing%20page.png)
+![Screenshot1] (images/landing page.png)
 
 ## Summary:
 The goal of this app was to provide a simpler and more consistent way to get information about geographic regions along with helpful map visuals.
