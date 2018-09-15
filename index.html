@@ -11,36 +11,37 @@
   </head>
 
   <body>
-    <header class="centerOnLoad">
+    <header class="centerOnLoad" role="banner">
       <h1 class="highContrastText">Global Location Search</h1>
       <h2 class="highContrastText">Traveling somewhere?  Just curious about a city, state, or country?  Search below to learn more!<h2>
-      <form>
+
+      <form role="search">
         <label aria-label="Search Box">
           <input id="addressBox" type="textbox" value="malibu ca">
-          <button id="searchButton" type="submit">Search</button>
+          <button id="searchButton" type="submit" role="button">Search</button>
         </label>
       </form>
     </header>
 
     <main>
-      <section class="areaHistory">
+      <section class="areaHistory" role="contentinfo" aria-live="polite">
         <div class="historyContainer"></div>
       </section>
 
-      <section class="mapsContainer">
+      <section class="mapsContainer" role="contentinfo" aria-live="polite">
         <div id="politicalMap" class="hideOnLoad"></div> 
         <div id="geographicMap" class="hideOnLoad"></div>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8H8xe_2NjlfBnHjyujuN5D8bp3FK1woI&callback=initMap" async defer></script>
       </section>
 
-      <section class="currentEvents hideOnLoad">
+      <section class="currentEvents hideOnLoad" role="contentinfo" aria-live="polite">
         <div class="newsContainer"></div>
       </section>
 
-      <section class="pageChangeButtons">
-        <button class="previousPage hideOnLoad" type="submit">Previous five articles</button>
+      <section class="pageChangeButtons" role="region">
+        <button class="previousPage hideOnLoad" type="submit" role="tab">Previous five articles</button>
         <div class="pageNumber hideOnLoad"></div>
-        <button class="nextPage hideOnLoad" type="submit">Next five articles</button>
+        <button class="nextPage hideOnLoad" type="submit" role="tab">Next five articles</button>
       </section>
     </main>
 
