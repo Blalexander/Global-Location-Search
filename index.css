@@ -18,6 +18,7 @@ header {
   background-color: #b4c9dc;
   border: 5px solid white;
   border-bottom: 5px solid #5d8ab4;
+  border-radius: 5px;
 }
 
 form {
@@ -84,6 +85,7 @@ form {
   margin: auto;
   border: 5px solid white;
   border-bottom: 5px solid #5d8ab4;
+  border-radius: 5px;
 }
 
 .newsArticleTitle {
