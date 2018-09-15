@@ -86,8 +86,7 @@ form {
 }
 
 .newsArticleTitle {
-  border: 5px solid #5d8ab4;
-  border-bottom: none;
+  border-top: 5px solid white;
   padding-left: .5vw;
 }
 
