@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 var newsPageNumber = 1;
 let input = document.querySelector('#addressBox').value;
 
@@ -31,6 +31,7 @@ function printWikiResults(wikiData) {
   description = description.replace("( ( listen))", "");
   description = description.replace("( listen);", "");
   description = description.replace("US:", "");
+  description = description.replace("()", "");
 
   $('.historyContainer').append(`<h1 class="highContrastText">${title}</h1>
   <p id="wikiDescription">${description}</p>
@@ -67,9 +68,9 @@ function printNewsResults(newsData) {
     let articleUrl = newsData.articles[i].url;
 
     $('.newsContainer').append(`<h2 class="newsArticleTitle">${title}</h2>
-    <h3>${sourceName}</h3>
-    <p>${description}</p>
-    <a href="${articleUrl}" target="_blank" class="newsArticleUrl">${articleUrl}</a>`);
+    <h3 class="newsContent">${sourceName}</h3>
+    <p class="newsContent">${description}</p>
+    <a href="${articleUrl}" target="_blank" class="newsContent">${articleUrl}</a>`);
   }
 }
 
@@ -104,7 +105,7 @@ $('.nextPage').on('click', function(e){
   newsPageNumber++;
   getNews(input, filterNewsResults);
   $('.pageNumber').removeClass("hideOnLoad");
-  $('.pageNumber').html(`<p>${newsPageNumber}</p>`);
+  $('.pageNumber').html(`<p>Page ${newsPageNumber}</p>`);
   if (newsPageNumber > 1) {
     $('.previousPage').removeClass("hideOnLoad");
   }
@@ -127,21 +128,4 @@ $('.previousPage').on('click', function(e){
 document.getElementById('searchButton').addEventListener('click',  function (e) {
   e.preventDefault();
   handleSubmit();
-});
-
-//controls the search bar static and fixed elements
-function sticktothetop() {
-  var window_top = $(window).scrollTop();
-  var top = $('#static-container').offset().top;
-  if (window_top > top) {
-    $('.stickyContainer').addClass('stick');
-    $('#static-container').height($('.stickyContainer').outerHeight());
-  } 
-  else {
-    $('.stickyContainer').removeClass('stick');
-  }
-}
-$(function() {
-  $(window).scroll(sticktothetop);
-  sticktothetop();
 });

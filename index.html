@@ -13,11 +13,11 @@
   <body>
     <header class="centerOnLoad">
       <h1 class="highContrastText">Global Location Search</h1>
-      <h3 class="highContrastText">Traveling somewhere?  Just curious about a city, state, or even country?  Search below to learn more!<h3>
-
-      <form id="static-container">
-        <div class="stickyContainer">
-          <input id="addressBox" type="textbox" value="Sydney">
+      <h2 class="highContrastText">Traveling somewhere?  Just curious about a city, state, or country?  Search below to learn more!<h2>
+        <!-- what's going on in Guam?  Texas?  Oklahoma City?  Search for a location here to find out more! -->
+      <form>
+        <div>
+          <input id="addressBox" type="textbox" value="malibu ca">
           <button id="searchButton" type="submit">Search</button>
         </div>
       </form>
@@ -38,10 +38,12 @@
         <div class="newsContainer" id="newsContainer"></div>
       </section>
 
-      <section class="pageChangeButtons">
-        <button class="previousPage hideOnLoad" type="submit">Previous Page</button>
+      <section>
         <div class="pageNumber hideOnLoad"></div>
-        <button class="nextPage hideOnLoad" type="submit">Next Page</button>
+        <div class="pageChangeButtons">
+          <button class="previousPage hideOnLoad" type="submit">Previous Page</button>
+          <button class="nextPage hideOnLoad" type="submit">Next Page</button>
+        </div>
       </section>
     </main>
 
