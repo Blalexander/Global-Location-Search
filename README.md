@@ -4,7 +4,7 @@
 
 
 ## Landing Page
-![Screenshot1] (/images/landing-page.PNG)
+![Screenshot1] (/images/landing page.PNG)
 
 ## Summary:
 The goal of this app was to provide a simpler and more consistent way to get information about geographic regions along with helpful map visuals.
