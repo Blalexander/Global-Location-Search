@@ -35,7 +35,7 @@ function printWikiResults(wikiData) {
 
   $('.historyContainer').append(`<h1 id="wikiTitle">${title}</h1>
   <h2 id="wikiDescription">${description}</h2>
-  <h4 id="wikiLink"><a href="${link}" target="_blank" class="wikiLink">Click here to read more about ${title}</a></h4>`);
+  <h3 id="wikiLink"><a href="${link}" target="_blank" class="wikiLink">Click here to read more about ${title}</a></h3>`);
 }
 
 function getNews(searchQuery, callback) {
@@ -85,6 +85,8 @@ function handleSubmit() {
   searchQuery = searchQuery.replace(",", "");
   getWiki(searchQuery, filterWikiResults);
 
+  $('#politicalMap').removeClass("hideOnLoad");
+  $('#geographicMap').removeClass("hideOnLoad");
   $('.currentEvents').removeClass("hideOnLoad");
   $('header').removeClass("centerOnLoad");
   $('.nextPage').removeClass("hideOnLoad");

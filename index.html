@@ -29,8 +29,8 @@
       </section>
 
       <section class="mapsContainer">
-        <div id="politicalMap"></div> 
-        <div id="geographicMap"></div>
+        <div id="politicalMap" class="hideOnLoad"></div> 
+        <div id="geographicMap" class="hideOnLoad"></div>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8H8xe_2NjlfBnHjyujuN5D8bp3FK1woI&callback=initMap" async defer></script>
       </section>
 
@@ -39,10 +39,11 @@
       </section>
 
       <section>
-        <div class="pageNumber hideOnLoad"></div>
+        <!-- <div class="pageNumber hideOnLoad"></div> -->
         <div class="pageChangeButtons">
-          <button class="previousPage hideOnLoad" type="submit">Previous Page</button>
-          <button class="nextPage hideOnLoad" type="submit">Next Page</button>
+          <button class="previousPage hideOnLoad" type="submit">Previous five articles</button>
+          <div class="pageNumber hideOnLoad"></div>
+          <button class="nextPage hideOnLoad" type="submit">Next five articles</button>
         </div>
       </section>
     </main>
