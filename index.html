@@ -12,25 +12,26 @@
 
   <body>
     <header class="centerOnLoad">
-      <h1>Global Location Search</h1>
-      <!-- <h3>Want to learn more about a different city, state, or country anywhere in the world? Enter a name or click Random to begin!</h3> -->
-      <h3>Traveling somewhere?  Just curious about a city, state, or even country?  Search below to learn more!<h3>
+      <h1 class="highContrastText">Global Location Search</h1>
+      <h3 class="highContrastText">Traveling somewhere?  Just curious about a city, state, or even country?  Search below to learn more!<h3>
 
-      <form id="floating-panel">
-        <input id="addressBox" type="textbox" value="Sydney">
-        <button id="searchButton" type="submit">Search</button>
+      <form id="static-container">
+        <div class="stickyContainer">
+          <input id="addressBox" type="textbox" value="Sydney">
+          <button id="searchButton" type="submit">Search</button>
+        </div>
       </form>
     </header>
 
     <main>
-      <section class="areaHistory" id="stick-here">
-        <div class="historyContainer" id="stickThis"></div>
+      <section class="areaHistory">
+        <div class="historyContainer"></div>
       </section>
 
       <section class="mapsContainer">
         <div id="politicalMap"></div> 
         <div id="geographicMap"></div>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8H8xe_2NjlfBnHjyujuN5D8bp3FK1woI&callback=initMap" async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8H8xe_2NjlfBnHjyujuN5D8bp3FK1woI&callback=initMap" async defer></script>
       </section>
 
       <section class="currentEvents">

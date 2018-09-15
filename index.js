@@ -29,10 +29,12 @@ function printWikiResults(wikiData) {
   let description = wikiData[2][0];
   let link = wikiData[3][0];
   description = description.replace("( ( listen))", "");
+  description = description.replace("( listen);", "");
+  description = description.replace("US:", "");
 
-  $('.historyContainer').append(`<h1>${title}</h1>
-  <p>${description}</p>
-  <p><a href="${link}" target="_blank" class="wikiLink">Click here to read more about ${title}</a></p>`);
+  $('.historyContainer').append(`<h1 class="highContrastText">${title}</h1>
+  <p id="wikiDescription">${description}</p>
+  <p id="wikiLink"><a href="${link}" target="_blank" class="wikiLink">Click here to read more about ${title}</a></p>`);
 }
 
 function getNews(searchQuery, callback) {
@@ -129,16 +131,16 @@ document.getElementById('searchButton').addEventListener('click',  function (e) 
 
 function sticktothetop() {
   var window_top = $(window).scrollTop();
-  var top = $('#stick-here').offset().top;
+  var top = $('#static-container').offset().top;
   if (window_top > top) {
-      $('#stickThis').addClass('stick');
-      $('#stick-here').height($('#stickThis').outerHeight());
-  } else {
-      $('#stickThis').removeClass('stick');
-      $('#stick-here').height(0);
+    $('.stickyContainer').addClass('stick');
+    $('#static-container').height($('.stickyContainer').outerHeight());
+  } 
+  else {
+    $('.stickyContainer').removeClass('stick');
+    // $('#static-container').height(0);
   }
 }
-
 $(function() {
   $(window).scroll(sticktothetop);
   sticktothetop();
