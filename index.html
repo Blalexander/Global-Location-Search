@@ -14,12 +14,11 @@
     <header class="centerOnLoad">
       <h1 class="highContrastText">Global Location Search</h1>
       <h2 class="highContrastText">Traveling somewhere?  Just curious about a city, state, or country?  Search below to learn more!<h2>
-        <!-- what's going on in Guam?  Texas?  Oklahoma City?  Search for a location here to find out more! -->
       <form>
-        <div>
+        <label aria-label="Search Box">
           <input id="addressBox" type="textbox" value="malibu ca">
           <button id="searchButton" type="submit">Search</button>
-        </div>
+        </label>
       </form>
     </header>
 
@@ -35,16 +34,13 @@
       </section>
 
       <section class="currentEvents hideOnLoad">
-        <div class="newsContainer" id="newsContainer"></div>
+        <div class="newsContainer"></div>
       </section>
 
-      <section>
-        <!-- <div class="pageNumber hideOnLoad"></div> -->
-        <div class="pageChangeButtons">
-          <button class="previousPage hideOnLoad" type="submit">Previous five articles</button>
-          <div class="pageNumber hideOnLoad"></div>
-          <button class="nextPage hideOnLoad" type="submit">Next five articles</button>
-        </div>
+      <section class="pageChangeButtons">
+        <button class="previousPage hideOnLoad" type="submit">Previous five articles</button>
+        <div class="pageNumber hideOnLoad"></div>
+        <button class="nextPage hideOnLoad" type="submit">Next five articles</button>
       </section>
     </main>
 

@@ -14,6 +14,7 @@ header {
   text-align: center;
   width: 80vw;
   margin: auto;
+  margin-bottom: 5vh;
   background-color: #b4c9dc;
   border: 5px solid white;
   border-bottom: 5px solid #5d8ab4;
@@ -39,8 +40,7 @@ form {
 .mapsContainer {
   display: flex;
   justify-content: center;
-  /* margin-top: 5vh; */
-  margin-bottom: 5vh;
+  margin-bottom: 8vh;
   width: 99%;
   height: 100%;
   z-index: 1;
@@ -72,7 +72,8 @@ form {
 }
 
 #wikiLink {
-  text-shadow: 0.04em 0 white, 0 0.04em white, -0.04em 0 white, 0 -0.04em white;
+  color: white;
+  text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
 }
 
 /* stylings for news articles and page selector--------------- */
@@ -85,7 +86,8 @@ form {
 }
 
 .newsArticleTitle {
-  border-top: 5px solid #5d8ab4;
+  border: 5px solid #5d8ab4;
+  border-bottom: none;
   padding-left: .5vw;
 }
 
@@ -130,7 +132,7 @@ form {
 }
 
 /* misc. classes------------------------ */
-.highContrastText, .newsArticleTitle, button {
+.highContrastText {
   color: black;
   text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white;
 }
@@ -156,6 +158,9 @@ a:link {
 }
 
 @media only screen and (max-width:500px) {
+  header, .currentEvents {
+    width: 99vw;
+  }
   .mapsContainer {
     flex-flow: column wrap;
     align-content: center;

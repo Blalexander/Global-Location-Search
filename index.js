@@ -34,8 +34,7 @@ function printWikiResults(wikiData) {
   description = description.replace("()", "");
 
   $('.historyContainer').append(`<h1 id="wikiTitle">${title}</h1>
-  <h2 id="wikiDescription">${description}</h2>
-  <h3 id="wikiLink"><a href="${link}" target="_blank" class="wikiLink">Click here to read more about ${title}</a></h3>`);
+  <h2 id="wikiDescription">${description}</h2>`);
 }
 
 function getNews(searchQuery, callback) {
