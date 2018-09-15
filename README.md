@@ -30,4 +30,4 @@ Wikipedia API
 * HTML
 * CSS
 * JavaScript
-* JQuery
+* jQuery
