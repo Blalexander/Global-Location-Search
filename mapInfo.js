@@ -114,7 +114,7 @@ function geocodeAddress(geocoder) {
       {
         featureType: 'water',
         elementType: 'geometry.fill',
-        stylers: [{color: '#7C84AE'}]
+        stylers: [{color: '#5d8ab4'}]
       },
       {
         featureType: 'water',

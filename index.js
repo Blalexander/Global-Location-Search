@@ -33,9 +33,9 @@ function printWikiResults(wikiData) {
   description = description.replace("US:", "");
   description = description.replace("()", "");
 
-  $('.historyContainer').append(`<h1 class="highContrastText">${title}</h1>
-  <p id="wikiDescription">${description}</p>
-  <p id="wikiLink"><a href="${link}" target="_blank" class="wikiLink">Click here to read more about ${title}</a></p>`);
+  $('.historyContainer').append(`<h1 id="wikiTitle">${title}</h1>
+  <h2 id="wikiDescription">${description}</h2>
+  <h4 id="wikiLink"><a href="${link}" target="_blank" class="wikiLink">Click here to read more about ${title}</a></h4>`);
 }
 
 function getNews(searchQuery, callback) {
@@ -60,7 +60,7 @@ function filterNewsResults(newsData) {
 }
 
 function printNewsResults(newsData) {
-  $('.newsContainer').prepend(`<h1>Trending News:</h1>`);
+  $('.newsContainer').prepend(`<h1 class="highContrastText">Trending News:</h1>`);
   for (var i=0; i<newsData.articles.length; i++) { 
     let title = newsData.articles[i].title;
     let sourceName = newsData.articles[i].source.name;
@@ -85,6 +85,7 @@ function handleSubmit() {
   searchQuery = searchQuery.replace(",", "");
   getWiki(searchQuery, filterWikiResults);
 
+  $('.currentEvents').removeClass("hideOnLoad");
   $('header').removeClass("centerOnLoad");
   $('.nextPage').removeClass("hideOnLoad");
   $('.historyContainer').html(" ");

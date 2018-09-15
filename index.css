@@ -1,14 +1,21 @@
 /* general--------------- */
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
 body {
   background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
   background-size: cover;
   height:100%;
 }
 
-
 /* header and search element styling--------------- */
 header {
   text-align: center;
+  width: 80vw;
+  margin: auto;
+  background-color: #b4c9dc;
+  border: 5px outset #b4c9dc;
 }
 
 form {
@@ -19,11 +26,19 @@ form {
   margin-top: 35vh;
 }
 
+#addressBox {
+  border-radius: 15px 0px 0px 15px;
+}
+
+#searchButton {
+  border-radius: 0px 15px 15px 0px;
+}
+
 /* map elements---------------- */
 .mapsContainer {
   display: flex;
   justify-content: center;
-  margin-top: 5vh;
+  /* margin-top: 5vh; */
   margin-bottom: 5vh;
   width: 99%;
   height: 100%;
@@ -46,19 +61,26 @@ form {
 .areaHistory {
   display: inline-flex;
   width: 100%;
-  background-color: #b9d3c2;
   text-align: center;
   justify-content: center;
+  color: white;
+  text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
 }
 
 /* stylings for news articles and page selector--------------- */
 .currentEvents {
-  background-color: #b9d3c2;
+  background-color: #b4c9dc;
+  width: 90vw;
+  margin: auto;
+  border: 5px outset #b4c9dc;
+  /* border-bottom: 5px solid #5d8ab4; */
+  /* border-right: 5px solid #5d8ab4; */
 }
 
 .newsArticleTitle {
-  border-top: 5px solid #7C84AE;
-  border-left: 10px solid #7C84AE;
+  border-top: 5px solid #5d8ab4;
+  border-left: 5px solid #5d8ab4;
+  padding-left: .5vw;
   /* border-radius: 20px; */
 }
 
@@ -69,17 +91,18 @@ form {
 .pageChangeButtons {
   display: inline-flex;
   width: 99%;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 5vh;
   margin-bottom: 5vh;
 }
 
 .pageNumber {
-  /* width: 10vw; */
+  width: 10vw;
   /* max-height: 8vh; */
+  margin: auto;
   font-weight: bold;
   text-align: center;
-  background-color: lightgray;
+  background-color: white;
   /* border-radius: 100%; */
 }
 
@@ -89,13 +112,17 @@ form {
 }
 
 /* misc. classes------------------------ */
-.highContrastText {
+.highContrastText, .newsArticleTitle {
   color: black;
-  text-shadow: 0.07em 0 #FFE7AA, 0 0.07em #FFE7AA, -0.07em 0 #FFE7AA, 0 -0.07em #FFE7AA;
+  text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white;
 }
 
 .hideOnLoad {
   display: none;
+}
+
+button {
+  background-color: white;
 }
 
 /* stylings for varying screen sizes------------------- */
