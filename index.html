@@ -8,19 +8,23 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link href="index.css" rel="stylesheet" type="text/css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display|DM+Serif+Text&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header class="centerOnLoad" role="banner">
-      <h1 class="highContrastText">Global Location Search</h1>
-      <h2 class="highContrastText">Traveling somewhere?  Just curious about a city, state, or country?  Search below to learn more!<h2>
+      <h1 class="highContrastText websiteTitle">Global Location Search</h1>
+      <h2 class="highContrastText websiteDescription">Traveling somewhere?  Just curious about a city, state, or country?  Search below to learn more!<h2>
 
-      <form role="search">
+      <div id="stick-here">
+      <form id="stickThis" role="search">
         <label aria-label="Search Box">
           <input id="addressBox" type="textbox" value="malibu ca">
           <button id="searchButton" type="submit" role="button">Search</button>
         </label>
       </form>
+      </div>
+
     </header>
 
     <main>

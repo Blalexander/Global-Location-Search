@@ -1,184 +1,312 @@
 /* general--------------- */
 * {
-  font-family: "Times New Roman", Times, serif;
+  /*! font-family: "Times New Roman", Times, serif; */
+  /*! font-family: 'DM Serif Display'; */
+    font-family: 'DM Serif Text';
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, .7);
+    transition: 0.3s;
+  }
+  
+  /* html {
+    height: 100%;
+  } */
+  
+  body {
+    background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
+    background-size: cover; 
+/*     background-color: lightgray; */
+/*     background-color: #b4c9dc; */
+    height:100%;
+    top: 0;
+/*     transition: 0.3s; */
+  }
+  
+  main {
+    
+  }
+  
+  /* header and search element styling--------------- */
+  header {
+    text-align: center;
+    width: 100vw;
+    top: 0;
+  /*   height: 15vh; */
+    margin: auto;
+    margin-bottom: 5vh;
+    background-color: white;
+  /*   background-color: #b4c9dc; */
+  /*   border: 5px solid #b4c9dc; */
+    border: 1px solid white;
+  /*   border-bottom: 5px solid #5d8ab4; */
+    /*! border-bottom: none; */
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 2;
+    display: flex;
+  /*   background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
+    background-size: cover; */
+  }
+
+.adjustAfterSearch {
+  margin-top: -3vh;
 }
 
-body {
-  background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
-  background-size: cover;
-  height:100%;
-}
-
-/* header and search element styling--------------- */
-header {
-  text-align: center;
-  width: 80vw;
-  margin: auto;
-  margin-bottom: 5vh;
-  background-color: #b4c9dc;
-  border: 5px solid white;
-  border-bottom: 5px solid #5d8ab4;
-  border-radius: 5px;
-}
-
-form {
-  text-align: center;
-}
-
-.centerOnLoad {
-  margin-top: 35vh;
-}
-
-#addressBox {
-  border-radius: 15px 0px 0px 15px;
-  text-align: center;
-}
-
-#searchButton {
-  border-radius: 0px 15px 15px 0px;
-}
-
-/* map elements---------------- */
-.mapsContainer {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 8vh;
-  width: 99%;
-  height: 100%;
-  z-index: 1;
-}
-
-#politicalMap {
-  height: 30vh;
-  width: 50vw;
-  border-radius: 500px 0px 0px 500px;
-  border: 3px solid white;
-  border-right: none;
-}
-
-#geographicMap {
-  height: 30vh;
-  width: 50vw;
-  border-radius: 0px 500px 500px 0px;
-  border: 3px solid white;
-}
-
-/* Wiki location info--------------------  */
-.areaHistory {
-  display: inline-flex;
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
-}
-
-#wikiLink {
-  color: white;
-  text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
-}
-
-/* stylings for news articles and page selector--------------- */
-.currentEvents {
-  background-color: #b4c9dc;
-  width: 90vw;
-  margin: auto;
-  border: 5px solid white;
-  border-bottom: 5px solid #5d8ab4;
-  border-radius: 5px;
-}
-
-.newsArticleTitle {
-  border-top: 5px solid white;
-  padding-left: .5vw;
-}
-
-.newsContent {
-  padding-left: 1vw;
-}
-
-.pageChangeButtons {
-  display: inline-flex;
-  width: 99%;
-  justify-content: space-around;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-}
-
-.pageNumber {
-  width: 9vw;
-  margin: auto;
-  font-weight: bold;
-  text-align: center;
-  background-color: white;
-  border-radius: 15px;
-  border: 3px solid white;
-  border-bottom: 5px solid darkgray;
-}
-
-.nextPage, .previousPage {
-  border: 4px solid darkgray;
-  width: 40vw;
-  height: 4vh;
-  border-radius: 15px;
-}
-
-.nextPage {
-  border-right: none;
-  border-top: none;
-}
-
-.previousPage {
-  border-left: none;
-  border-top: none;
-}
-
-/* misc. classes------------------------ */
-.highContrastText {
-  color: black;
-  text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white;
-}
-
-.hideOnLoad {
+.hideAfterSearch {
   display: none;
 }
 
-button {
-  background-color: white;
+.websiteTitle {
+/*   text-decoration: underline rgba(0, 0, 0, .7); */
+  width: 30vw;
+  height: 6vh;
+  border-bottom: 3px solid rgba(0, 0, 0, .7);
+  margin: auto;
+/*   margin-left: 35%; */
+  margin-top: 3vh;
 }
-
-a:link {
-  text-decoration: none;
-}
-
-/* stylings for varying screen sizes------------------- */
-@media only screen and (min-width:900px) {
-  #politicalMap, #geographicMap {
-    height: 40vh;
-    width: 40vw;
-  }
-}
-
-@media only screen and (max-width:500px) {
-  header, .currentEvents {
-    width: 99vw;
-  }
-  .mapsContainer {
-    flex-flow: column wrap;
-    align-content: center;
-  }
-  #politicalMap, #geographicMap {
-    height: 30vh;
-    width: 80vw;
-    border-radius: 500px;
-  }
-  .areaHistory {
+  
+  form {
+    text-align: center;
     width: 100%;
+  /*   background-color: #b4c9dc; */
+    background-color: white;
+/*     border-top: 3px solid black; */
+/*     border-bottom: 3px solid white; */
+  /*   background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
+    background-size: cover; */
+    position: absolute;
+    padding: 4vh;
   }
-  .nextPage, .previousPage {
-    height: 8vh;
+
+  #addressBox {
+    border-radius: 15px 0px 0px 15px;
+    text-align: center;
+    font-size-adjust: .5;
+    font-family: 'DM Serif Text';
+    border: 2px solid lightgray;
   }
-  #addressBox, #searchButton {
-    border-radius: 15px;
-  }
+
+#addressBox:focus {
+  background-color: lightcyan;
+/*   border: 2px solid deepskyblue; */
 }
+  
+  #searchButton {
+    border-radius: 0px 15px 15px 0px;
+    font-size-adjust: .5;
+    font-family: 'DM Serif Text';
+    border: 2px solid lightgray;
+/*     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3); */
+  }
+
+#searchButton:hover {
+  cursor: pointer;
+  background-color: lightcyan;
+  transition: 0.5s;
+}
+
+.topAndBottomBars {
+/*    border-top: 3px solid black; */
+  border-bottom: 3px solid white;
+/*    border-bottom: 3px solid black; */
+  padding: 1vh;
+}
+  
+  #stickThis.stick {
+    position: fixed;
+    border-bottom: 3px solid black;
+    top: 0;
+    z-index: 9999;
+  }
+
+#stick-here {
+/*   margin-bottom: 4vh; */
+}
+  
+  .centerOnLoad {
+    margin-top: 35vh;
+  }
+  
+  
+  /* map elements---------------- */
+  .mapsContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8vh;
+    margin-top: 3vh;
+    width: 99%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  #politicalMap {
+    height: 30vh;
+    width: 50vw;
+    border-radius: 500px 0px 0px 500px;
+    border: 3px solid white;
+    border-right: none;
+  }
+  
+  #geographicMap {
+    height: 30vh;
+    width: 50vw;
+    border-radius: 0px 500px 500px 0px;
+    border: 3px solid white;
+  }
+  
+  /* Wiki location info--------------------  */
+  .areaHistory {
+    margin-top: 8vh;
+    display: inline-flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+  /*   color: white; */
+  /*   text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black; */
+  }
+  
+  #wikiLink {
+    color: white;
+    text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+  }
+  
+  /* stylings for news articles and page selector--------------- */
+  .currentEvents {
+  /*   background-color: #b4c9dc; */
+    background-color: white;
+  /*   background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
+    background-size: cover; */
+    width: 90vw;
+    margin: auto;
+  /*   border: 5px solid white; */
+  /*   border-bottom: 5px solid #5d8ab4; */
+    border-radius: 5px;
+    padding-bottom: 2vh;
+  }
+
+.trendingNews {
+  border-bottom: 3px solid rgba(0, 0, 0, .7);
+/*     background-color: white; */
+}
+  
+  .newsArticleTitle {
+  /*   border-top: 5px solid white; */
+/*     border-top: 5px solid black; */
+    padding-top: 5px;
+    padding-left: 1.5vw;
+    margin-top: 5vh;
+  }
+
+.newsArticleTitle:first-of-type {
+  margin-top: 1vh;
+}
+  
+  .newsContent {
+    padding-left: 3vw;
+    padding-right: 3vw;
+/*     margin-bottom: 3vh; */
+/*     margin-top: 1vh; */
+  }
+
+.newsUrl {
+  display: flex;
+}
+
+.newsUrl:hover {
+  color: steelblue;
+}
+  
+  .pageChangeButtons {
+    display: inline-flex;
+    width: 99%;
+    justify-content: space-around;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  
+  .pageNumber {
+    width: 9vw;
+    margin: auto;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    border: 3px solid white;
+    border-bottom: 5px solid darkgray;
+  }
+  
+  .nextPage, .previousPage {
+/*     border: 4px solid darkgray; */
+    border: none;
+    width: 40vw;
+    height: 4vh;
+    border-radius: 15px;
+    font-size-adjust: .7;
+   font-family: 'DM Serif Text';
+  }
+  
+  .nextPage {
+    border-right: none;
+    border-top: none;
+  }
+  
+  .previousPage {
+    border-left: none;
+    border-top: none;
+  }
+  
+  /* misc. classes------------------------ */
+  /* .highContrastText {
+    color: black;
+    text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white;
+  } */
+  
+  .hideOnLoad {
+    display: none;
+  }
+  
+  button {
+    background-color: white;
+/*    font-family: 'DM Serif Display'; */
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  
+  
+  
+  /* stylings for varying screen sizes------------------- */
+  @media only screen and (min-width:900px) {
+    #politicalMap, #geographicMap {
+      height: 40vh;
+      width: 40vw;
+    }
+  }
+  
+  @media only screen and (max-width:500px) {
+    header, .currentEvents {
+      width: 99vw;
+    }
+    .mapsContainer {
+      flex-flow: column wrap;
+      align-content: center;
+    }
+    #politicalMap, #geographicMap {
+      height: 30vh;
+      width: 80vw;
+      border-radius: 500px;
+    }
+    .areaHistory {
+      width: 100%;
+    }
+    .nextPage, .previousPage {
+      height: 8vh;
+    }
+    #addressBox, #searchButton {
+      border-radius: 15px;
+    }
+  }

@@ -59,7 +59,7 @@ function filterNewsResults(newsData) {
 }
 
 function printNewsResults(newsData) {
-  $('.newsContainer').prepend(`<h1 class="highContrastText">Trending News:</h1>`);
+  $('.newsContainer').prepend(`<h1 class="trendingNews">Trending News:</h1>`);
   for (var i=0; i<newsData.articles.length; i++) { 
     let title = newsData.articles[i].title;
     let sourceName = newsData.articles[i].source.name;
@@ -69,7 +69,7 @@ function printNewsResults(newsData) {
     $('.newsContainer').append(`<h2 class="newsArticleTitle">${title}</h2>
     <h3 class="newsContent">${sourceName}</h3>
     <p class="newsContent">${description}</p>
-    <a href="${articleUrl}" target="_blank" class="newsContent">${articleUrl}</a>`);
+    <a href="${articleUrl}" target="_blank" class="newsContent newsUrl">${articleUrl}</a>`);
   }
 }
 
@@ -84,6 +84,9 @@ function handleSubmit() {
   searchQuery = searchQuery.replace(",", "");
   getWiki(searchQuery, filterWikiResults);
 
+  $('#stickThis').addClass("topAndBottomBars");
+  $('header').addClass("adjustAfterSearch");
+  $('.websiteDescription').addClass("hideAfterSearch");
   $('#politicalMap').removeClass("hideOnLoad");
   $('#geographicMap').removeClass("hideOnLoad");
   $('.currentEvents').removeClass("hideOnLoad");
@@ -130,4 +133,21 @@ $('.previousPage').on('click', function(e){
 document.getElementById('searchButton').addEventListener('click',  function (e) {
   e.preventDefault();
   handleSubmit();
+});
+
+function sticktothetop() {
+  var window_top = $(window).scrollTop();
+  var top = $('#stick-here').offset().top;
+  // var top = $('#stickThis').offset().top;
+  if (window_top > top) {
+      $('#stickThis').addClass('stick');
+      // $('#stick-here').height($('#stickThis').outerHeight(true));
+  } else {
+      $('#stickThis').removeClass('stick');
+      // $('#stick-here').height(0);
+  }
+}
+$(function() {
+  $(window).scroll(sticktothetop);
+  sticktothetop();
 });
