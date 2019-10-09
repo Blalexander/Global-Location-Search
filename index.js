@@ -1,6 +1,8 @@
 'use strict';
 var newsPageNumber = 1;
 let input = document.querySelector('#addressBox').value;
+document.addEventListener("touchstart", function() {}, true);
+
 
 function getWiki(searchQuery, callback) {
   let wikiEP = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${searchQuery}&limit=1&format=json&callback=?`;

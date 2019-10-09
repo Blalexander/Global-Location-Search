@@ -31,7 +31,7 @@
     text-align: center;
     width: 100vw;
     top: 0;
-  /*   height: 15vh; */
+/*     height: 15vh; */
     margin: auto;
     margin-bottom: 5vh;
     background-color: white;
@@ -40,7 +40,7 @@
     border: 1px solid white;
   /*   border-bottom: 5px solid #5d8ab4; */
     /*! border-bottom: none; */
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+/*     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2); */
     border-radius: 5px;
     z-index: 2;
     display: flex;
@@ -194,6 +194,8 @@
   .newsArticleTitle {
   /*   border-top: 5px solid white; */
 /*     border-top: 5px solid black; */
+/*     border-bottom: 3px solid rgba(0, 0, 0, .7); */
+/*     text-decoration: underline solid rgba(0, 0, 0, .7); */
     padding-top: 5px;
     padding-left: 1.5vw;
     margin-top: 5vh;
@@ -206,12 +208,23 @@
   .newsContent {
     padding-left: 3vw;
     padding-right: 3vw;
+    line-height: 1.5;
 /*     margin-bottom: 3vh; */
 /*     margin-top: 1vh; */
   }
 
+.newsContainer > p {
+  margin-top: -1vh;
+}
+
+h3 {
+  margin-left: -1vw;
+  margin-top: -2vh;
+}
+
 .newsUrl {
   display: flex;
+  color: navy;
 }
 
 .newsUrl:hover {
@@ -246,6 +259,12 @@
     font-size-adjust: .7;
    font-family: 'DM Serif Text';
   }
+
+.nextPage:hover, .nextPage:focus, .nextPage:active, .previousPage:hover {
+  cursor: pointer;
+  background-color: lightcyan;
+  transition: 0.5s;
+}
   
   .nextPage {
     border-right: none;
@@ -290,6 +309,10 @@
   @media only screen and (max-width:500px) {
     header, .currentEvents {
       width: 99vw;
+    }
+    .websiteTitle {
+      height: unset;
+      width: unset;
     }
     .mapsContainer {
       flex-flow: column wrap;
