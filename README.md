@@ -4,16 +4,14 @@
 
 
 ## Landing Page
-![Screenshot1](/images/landing_page.png)
+![Screenshot1](/images/glslanding.png)
 
 ## Top half of page after a search is done
-![Screenshot2](/images/top_half_after_search.png)
+![Screenshot2](/images/glslanding.png)
 
 ## Bottom half of page after a search is done
-![Screenshot3](/images/bottom_half_of_search.png)
+![Screenshot3](/images/glslanding.png)
 
-## Updated buttons after next page pressed
-![Screenshot4](/images/updated_page_after_next_button_pressed.png)
 
 ## Summary:
 The goal of this app was to provide a simpler and more consistent way to get information about geographic regions along with helpful map visuals.
