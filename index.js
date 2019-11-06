@@ -93,7 +93,9 @@ function handleSubmit() {
   $('#geographicMap').removeClass("hideOnLoad");
   $('.currentEvents').removeClass("hideOnLoad");
   $('header').removeClass("centerOnLoad");
+  $('.pageChangeButtons')[0].style.backgroundColor = "white";
   $('.nextPage').removeClass("hideOnLoad");
+  $('footer').addClass("adjustmentsAfterSearch");
   $('.historyContainer').html(" ");
   $('.newsContainer').html(" ");
 }
@@ -112,7 +114,7 @@ $('.nextPage').on('click', function(e){
   newsPageNumber++;
   getNews(input, filterNewsResults);
   $('.pageNumber').removeClass("hideOnLoad");
-  $('.pageNumber').html(`<p>Page ${newsPageNumber}</p>`);
+  $('.pageNumber').html(`<p>${newsPageNumber}</p>`);
   if (newsPageNumber > 1) {
     $('.previousPage').removeClass("hideOnLoad");
   }

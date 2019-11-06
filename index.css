@@ -2,51 +2,37 @@
 * {
   /*! font-family: "Times New Roman", Times, serif; */
   /*! font-family: 'DM Serif Display'; */
-    font-family: 'DM Serif Text';
-    box-sizing: border-box;
-    color: rgba(0, 0, 0, .7);
-    transition: 0.3s;
-  }
-  
-  /* html {
-    height: 100%;
-  } */
-  
-  body {
-    background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
-    background-size: cover; 
-/*     background-color: lightgray; */
-/*     background-color: #b4c9dc; */
-    height:100%;
-    top: 0;
-/*     transition: 0.3s; */
-  }
-  
-  main {
-    
-  }
-  
-  /* header and search element styling--------------- */
-  header {
-    text-align: center;
-    width: 100vw;
-    top: 0;
-/*     height: 15vh; */
-    margin: auto;
-    margin-bottom: 5vh;
-    background-color: white;
-  /*   background-color: #b4c9dc; */
-  /*   border: 5px solid #b4c9dc; */
-    border: 1px solid white;
-  /*   border-bottom: 5px solid #5d8ab4; */
-    /*! border-bottom: none; */
-/*     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2); */
-    border-radius: 5px;
-    z-index: 2;
-    display: flex;
-  /*   background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
-    background-size: cover; */
-  }
+  font-family: 'DM Serif Text';
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, .9);
+  transition: 0.3s;
+}
+
+
+body {
+  background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
+  background-size: cover; 
+  height:100%;
+  width: 100%;
+  top: 0;
+  overflow-x: hidden;
+}
+
+
+
+/* header and search element styling--------------- */
+header {
+  text-align: center;
+  width: 100%;
+  top: 0;
+  margin: auto;
+  margin-bottom: 5vh;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  z-index: 2;
+  display: flex;
+}
 
 .adjustAfterSearch {
   margin-top: -3vh;
@@ -57,168 +43,164 @@
 }
 
 .websiteTitle {
-/*   text-decoration: underline rgba(0, 0, 0, .7); */
   width: 30vw;
   height: 6vh;
   border-bottom: 3px solid rgba(0, 0, 0, .7);
   margin: auto;
-/*   margin-left: 35%; */
-  margin-top: 3vh;
+  margin-top: 5vh;
 }
   
-  form {
-    text-align: center;
-    width: 100%;
-  /*   background-color: #b4c9dc; */
-    background-color: white;
-/*     border-top: 3px solid black; */
-/*     border-bottom: 3px solid white; */
-  /*   background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
-    background-size: cover; */
-    position: absolute;
-    padding: 4vh;
-  }
+form {
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  padding: 4vh;
+  padding-left: 0px;
+  left: 0px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
 
-  #addressBox {
-    border-radius: 15px 0px 0px 15px;
-    text-align: center;
-    font-size-adjust: .5;
-    font-family: 'DM Serif Text';
-    border: 2px solid lightgray;
-  }
+#addressBox {
+  border-radius: 15px 0px 0px 15px;
+  text-align: center;
+  font-size-adjust: .5;
+  font-family: 'DM Serif Text';
+  border: 2px solid rgba(0, 0, 0, .7);
+  color: rgba(0, 0, 0, .7);
+}
 
 #addressBox:focus {
-  background-color: lightcyan;
-/*   border: 2px solid deepskyblue; */
+  background-color: rgba(176, 224, 230, .1);
+  box-shadow: inset 0 0 5px 3px rgba(176, 224, 230, 1);
+  border: 2px solid rgba(0, 0, 0, .9);
+  color: rgba(0, 0, 0, .9);
 }
   
-  #searchButton {
-    border-radius: 0px 15px 15px 0px;
-    font-size-adjust: .5;
-    font-family: 'DM Serif Text';
-    border: 2px solid lightgray;
-/*     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3); */
-  }
+#searchButton {
+  border-radius: 0px 15px 15px 0px;
+  font-size-adjust: .5;
+  font-family: 'DM Serif Text';
+  border: 3px solid transparent;
+  background-color: rgba(0, 0, 0, .7);
+  color: white;
+}
 
 #searchButton:hover {
   cursor: pointer;
-  background-color: lightcyan;
-  transition: 0.5s;
+  transition: 0.3s;
+  background-color: rgba(0, 0, 0, .9);
+  color: powderblue;
 }
 
 .topAndBottomBars {
-/*    border-top: 3px solid black; */
   border-bottom: 3px solid white;
-/*    border-bottom: 3px solid black; */
   padding: 1vh;
 }
   
-  #stickThis.stick {
-    position: fixed;
-    border-bottom: 3px solid black;
-    top: 0;
-    z-index: 9999;
-  }
-
-#stick-here {
-/*   margin-bottom: 4vh; */
+#stickThis.stick {
+  position: fixed;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  top: 0;
+  z-index: 9999;
 }
+
   
-  .centerOnLoad {
-    margin-top: 35vh;
-  }
+.centerOnLoad {
+  margin-top: 35vh;
+}
+
+
   
   
   /* map elements---------------- */
-  .mapsContainer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 8vh;
-    margin-top: 3vh;
-    width: 99%;
-    height: 100%;
-    z-index: 1;
-  }
+.mapsContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8vh;
+  margin-top: 3vh;
+  width: 99%;
+  height: 100%;
+  z-index: 1;
+}
+
+#politicalMap {
+  height: 30vh;
+  width: 50vw;
+  border-radius: 500px 0px 0px 500px;
+  border: 3px solid white;
+  border-right: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   
-  #politicalMap {
-    height: 30vh;
-    width: 50vw;
-    border-radius: 500px 0px 0px 500px;
-    border: 3px solid white;
-    border-right: none;
-  }
+}
+
+#geographicMap {
+  height: 30vh;
+  width: 50vw;
+  border-radius: 0px 500px 500px 0px;
+  border: 3px solid white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/* Wiki location info--------------------  */
+.areaHistory {
+  margin-top: 8vh;
+  display: inline-flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
   
-  #geographicMap {
-    height: 30vh;
-    width: 50vw;
-    border-radius: 0px 500px 500px 0px;
-    border: 3px solid white;
-  }
+#wikiLink {
+  color: white;
+  text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+}
   
-  /* Wiki location info--------------------  */
-  .areaHistory {
-    margin-top: 8vh;
-    display: inline-flex;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    background-color: white;
-  /*   color: white; */
-  /*   text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black; */
-  }
-  
-  #wikiLink {
-    color: white;
-    text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
-  }
-  
+
+
+
   /* stylings for news articles and page selector--------------- */
-  .currentEvents {
-  /*   background-color: #b4c9dc; */
-    background-color: white;
-  /*   background: url('https://wallpapercave.com/wp/sYIlSxO.jpg') no-repeat center center fixed;
-    background-size: cover; */
-    width: 90vw;
-    margin: auto;
-  /*   border: 5px solid white; */
-  /*   border-bottom: 5px solid #5d8ab4; */
-    border-radius: 5px;
-    padding-bottom: 2vh;
-  }
+.currentEvents {
+  background-color: white;
+  width: 90vw;
+  margin: auto;
+  border-radius: 5px;
+  padding-bottom: 2vh;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
 
 .trendingNews {
   border-bottom: 3px solid rgba(0, 0, 0, .7);
-/*     background-color: white; */
+  margin: 1vw;
 }
   
-  .newsArticleTitle {
-  /*   border-top: 5px solid white; */
-/*     border-top: 5px solid black; */
-/*     border-bottom: 3px solid rgba(0, 0, 0, .7); */
-/*     text-decoration: underline solid rgba(0, 0, 0, .7); */
-    padding-top: 5px;
-    padding-left: 1.5vw;
-    margin-top: 5vh;
-  }
+.newsArticleTitle {
+  padding-top: 5px;
+  padding-left: 1vw;
+  margin-top: 5vh;
+}
 
 .newsArticleTitle:first-of-type {
   margin-top: 1vh;
 }
   
-  .newsContent {
-    padding-left: 3vw;
-    padding-right: 3vw;
-    line-height: 1.5;
-/*     margin-bottom: 3vh; */
-/*     margin-top: 1vh; */
-  }
+.newsContent {
+  padding-left: 2vw;
+  padding-right: 3vw;
+  line-height: 1.5;
+}
 
 .newsContainer > p {
   margin-top: -1vh;
 }
 
 h3 {
-  margin-left: -1vw;
+  margin-left: -0.9vw;
   margin-top: -2vh;
 }
 
@@ -231,105 +213,127 @@ h3 {
   color: steelblue;
 }
   
-  .pageChangeButtons {
-    display: inline-flex;
-    width: 99%;
-    justify-content: space-around;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-  }
-  
-  .pageNumber {
-    width: 9vw;
-    margin: auto;
-    font-weight: bold;
-    text-align: center;
-    background-color: white;
-    border-radius: 15px;
-    border: 3px solid white;
-    border-bottom: 5px solid darkgray;
-  }
-  
-  .nextPage, .previousPage {
-/*     border: 4px solid darkgray; */
-    border: none;
-    width: 40vw;
-    height: 4vh;
-    border-radius: 15px;
-    font-size-adjust: .7;
-   font-family: 'DM Serif Text';
-  }
-
-.nextPage:hover, .nextPage:focus, .nextPage:active, .previousPage:hover {
-  cursor: pointer;
-  background-color: lightcyan;
-  transition: 0.5s;
+.pageChangeButtons {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  justify-content: space-around;
+  margin-top: 5vh;
+/*   margin-bottom: 5vh; */
+  /* background-color: white; */
+/*   position: absolute; */
+  padding-left: 5vw;
+  padding-right: 5vw;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
 }
   
-  .nextPage {
-    border-right: none;
-    border-top: none;
+.pageNumber {
+/*   width: 9vw; */
+  margin: auto;
+  font-weight: bold;
+  text-align: center;
+  font-size-adjust: 1.5;
+  border-radius: 15px;
+  border: none;
+}
+  
+.nextPage, .previousPage {
+  border: none;
+  width: 30vw;
+  height: 4vh;
+  border-radius: 15px;
+  font-size-adjust: .7;
+  font-family: 'DM Serif Text';
+  background-color: rgba(0, 0, 0, .7);
+  color: white;
+/*   transition: 0.1s; */
+}
+
+.nextPage:hover, .previousPage:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .9);
+/*   transition: 0.1s; */
+  color: powderblue;
+}
+
+
+footer  {
+/*   margin: 0;
+  background-color: white;
+  height: 100%;
+  border-bottom: 2px solid white; */
+}
+
+
+
+/* misc. classes------------------------ */
+.hideOnLoad {
+  display: none;
+}
+
+.adjustmentsAfterSearch p {
+  margin: 0;
+  background-color: white;
+  height: 100%;
+  border-bottom: 2px solid white;
+}
+
+button {
+  background-color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+  
+  
+ 
+  
+/* stylings for varying screen sizes------------------- */
+@media only screen and (min-width:900px) {
+  #politicalMap, #geographicMap {
+    height: 40vh;
+    width: 40vw;
   }
-  
-  .previousPage {
-    border-left: none;
-    border-top: none;
+}
+
+@media only screen and (max-width:500px) {
+  .centerOnLoad {
+    margin-top: 0;
   }
-  
-  /* misc. classes------------------------ */
-  /* .highContrastText {
-    color: black;
-    text-shadow: 0.07em 0 white, 0 0.07em white, -0.07em 0 white, 0 -0.07em white;
-  } */
-  
-  .hideOnLoad {
-    display: none;
+  #searchButton {
+    margin-top: 1vh;
   }
-  
-  button {
-    background-color: white;
-/*    font-family: 'DM Serif Display'; */
+  .currentEvents {
+    width: 100%;
   }
-  
-  a:link {
-    text-decoration: none;
+  .websiteTitle {
+    height: unset;
+    width: unset;
   }
-  
-  
-  
-  
-  /* stylings for varying screen sizes------------------- */
-  @media only screen and (min-width:900px) {
-    #politicalMap, #geographicMap {
-      height: 40vh;
-      width: 40vw;
-    }
+  .mapsContainer {
+    flex-flow: column wrap;
+    align-content: center;
   }
-  
-  @media only screen and (max-width:500px) {
-    header, .currentEvents {
-      width: 99vw;
-    }
-    .websiteTitle {
-      height: unset;
-      width: unset;
-    }
-    .mapsContainer {
-      flex-flow: column wrap;
-      align-content: center;
-    }
-    #politicalMap, #geographicMap {
-      height: 30vh;
-      width: 80vw;
-      border-radius: 500px;
-    }
-    .areaHistory {
-      width: 100%;
-    }
-    .nextPage, .previousPage {
-      height: 8vh;
-    }
-    #addressBox, #searchButton {
-      border-radius: 15px;
-    }
+  #politicalMap, #geographicMap {
+    height: 30vh;
+    width: 80vw;
+    border-radius: 500px;
   }
+  .areaHistory {
+    width: 100%;
+  }
+  .nextPage, .previousPage {
+    height: 8vh;
+    font-size-adjust: .4;
+    background-color: rgba(0, 0, 0, .9);
+  }
+  #addressBox, #searchButton {
+    border-radius: 15px;
+  }
+  .adjustmentsAfterSearch p {
+    border-top: 4vh solid white;
+    font-size-adjust: 0.4;
+  }
+}
