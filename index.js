@@ -93,7 +93,7 @@ function handleSubmit() {
   $('#geographicMap').removeClass("hideOnLoad");
   $('.currentEvents').removeClass("hideOnLoad");
   $('header').removeClass("centerOnLoad");
-  $('.pageChangeButtons')[0].style.backgroundColor = "white";
+  $('.pageChangeButtons').removeClass('hideOnLoad');
   $('.nextPage').removeClass("hideOnLoad");
   $('footer').addClass("adjustmentsAfterSearch");
   $('.historyContainer').html(" ");
