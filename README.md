@@ -1,6 +1,6 @@
-# Global-Location-Search
+# TakeMeThere
 
-## Live link to WebApp: https://blalexander.github.io/Global-Location-Search/
+## Live link to WebApp: https://blalexander.github.io/TakeMeThere/
 
 
 ## Landing Page
