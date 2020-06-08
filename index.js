@@ -44,14 +44,17 @@ function getNews(searchQuery, callback) {
   $.ajax({
     type: 'GET',
     url: newsEP,
+    // headers: {  'Access-Control-Allow-Origin': '*' },
+    contenttype: 'application/x-www-form-urlencoded; charset=UTF-8',
     async: true,
-    datatype: 'json',
+    datatype: 'jsonp',
     success: callback,
   });
 }
 
 //checks to see if there is more than one result and prints a response if there is not
 function filterNewsResults(newsData) {
+  console.log(newsData)
   if (newsData.articles.length < 1) {
     $('.newsContainer').html("<h2>Sorry!  We couldn't find any news results for that search!</h2>");
   }
@@ -67,6 +70,7 @@ function printNewsResults(newsData) {
     let sourceName = newsData.articles[i].source.name;
     let description = newsData.articles[i].description;
     let articleUrl = newsData.articles[i].url;
+    console.log(title, sourceName, description)
 
     $('.newsContainer').append(`<h2 class="newsArticleTitle">${title}</h2>
     <h3 class="newsContent">${sourceName}</h3>

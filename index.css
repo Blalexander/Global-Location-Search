@@ -51,7 +51,7 @@ header {
 }
 
 .websiteTitle {
-  width: 30vw;
+  width: 40vw;
   height: 6vh;
   border-bottom: 3px solid rgba(0, 0, 0, .7);
   margin: auto;
@@ -309,6 +309,7 @@ a:link {
   .websiteTitle {
     height: unset;
     width: unset;
+    margin-top: 4vh;
   }
   .mapsContainer {
     flex-flow: column wrap;
