@@ -11,7 +11,7 @@ function getWiki(searchQuery, callback) {
     type: 'GET',
     url: wikiEP,
     async: true,
-    dataType: 'json',      
+    dataType: 'jsonp',      
     success: callback
   });
 }
