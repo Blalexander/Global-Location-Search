@@ -44,7 +44,6 @@ function getNews(searchQuery, callback) {
   $.ajax({
     type: 'GET',
     url: newsEP,
-    // headers: {  'Access-Control-Allow-Origin': '*' },
     contenttype: 'application/x-www-form-urlencoded; charset=UTF-8',
     async: true,
     datatype: 'jsonp',
