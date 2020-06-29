@@ -18,20 +18,20 @@ function getWiki(searchQuery, callback) {
 
 //searches description given from API for Wiki's default phrase "may refer to" and replaces it with a more helpful explanation
 function filterWikiResults(wikiData) {
-  console.log(wikiData)
-  if (wikiData[2][0].includes("may refer to")) {
-    $('.historyContainer').append(`<p>Uh oh!  There seems to be a few places with that name.</p>
-    <p>You can try making your search more specific, or clicking <a href="${wikiData[3][0]}" target="_blank">here</a> to see results on Wikipedia.</p>`);
-  }
-  else {
+  console.log(wikiData.query.search[0])
+  // if (wikiData[2][0].includes("may refer to")) {
+  //   $('.historyContainer').append(`<p>Uh oh!  There seems to be a few places with that name.</p>
+  //   <p>You can try making your search more specific, or clicking <a href="${wikiData[3][0]}" target="_blank">here</a> to see results on Wikipedia.</p>`);
+  // }
+  // else {
     printWikiResults(wikiData);
-  }
+  // }
 }
 
 function printWikiResults(wikiData) {
-  let title = wikiData[1][0];
-  let description = wikiData[2][0];
-  let link = wikiData[3][0];
+  let title = wikiData.query.search[0].title;
+  let description = wikiData.query.search[0].snippet;
+  // let link = wikiData[3][0];
   description = description.replace("( ( listen))", "");
   description = description.replace("( listen);", "");
   description = description.replace("US:", "");
@@ -108,6 +108,7 @@ function handleSubmit() {
   searchQuery = searchQuery.replace(",", "");
   getWiki(searchQuery, filterWikiResults);
 
+  document.querySelector('body').style.overflowY = "unset";
   $('#stickThis').addClass("topAndBottomBars");
   $('header').addClass("adjustAfterSearch");
   $('.websiteDescription').addClass("hideAfterSearch");

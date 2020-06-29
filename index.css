@@ -16,6 +16,7 @@ body {
   width: 100%;
   top: 0;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 h1 {
@@ -40,6 +41,25 @@ header {
   border-radius: 5px;
   z-index: 2;
   display: flex;
+}
+
+header h1 {
+  
+}
+
+#title-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+text {
+  
+}
+
+textPath {
+  font-size-adjust: 1;
+  text-align: center;
 }
 
 .adjustAfterSearch {
@@ -158,6 +178,8 @@ form {
   margin-top: 8vh;
   display: inline-flex;
   width: 100%;
+  padding-left: 10em;
+  padding-right: 10em;
   text-align: center;
   justify-content: center;
   background-color: white;
