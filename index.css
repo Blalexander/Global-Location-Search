@@ -26,6 +26,8 @@ h1 {
 
 h2 {
   font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  
 }
 
 
@@ -43,24 +45,16 @@ header {
   display: flex;
 }
 
-header h1 {
-  
-}
-
-#title-svg {
+/* #title-svg {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-text {
-  
-}
-
 textPath {
   font-size-adjust: 1;
   text-align: center;
-}
+} */
 
 .adjustAfterSearch {
   margin-top: -3vh;
@@ -72,8 +66,8 @@ textPath {
 
 .websiteTitle {
   width: 40vw;
-  height: 6vh;
-  border-bottom: 3px solid rgba(0, 0, 0, .7);
+/*   height: 6vh; */
+/*   border-bottom: 3px solid rgba(0, 0, 0, .7); */
   margin: auto;
   margin-top: 5vh;
 }
@@ -84,7 +78,6 @@ form {
   background-color: white;
   position: absolute;
   padding: 4vh;
-  padding-left: 0px;
   left: 0px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }

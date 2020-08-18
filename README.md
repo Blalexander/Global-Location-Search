@@ -4,13 +4,13 @@
 
 
 ## Landing Page
-![Screenshot1]
+![Screenshot1](/images/takemetherelanding.png)
 
 ## Top half of page after a search is done
-![Screenshot2]
+![Screenshot2](/images/takemetheretop.png)
 
 ## Bottom half of page after a search is done
-![Screenshot3]
+![Screenshot3](/images/takemetherebottom.png)
 
 
 ## Summary:
