@@ -60,6 +60,7 @@ function getNews(searchQuery, callback) {
   });
 }
 
+//Previous function which got news from NewsAPI.  Commenting out and keeping here for potential future use.
 // function getNews(searchQuery, callback) {
 //   let newsEP = `https://newsapi.org/v2/everything?q=${searchQuery}&sortBy=relevancy&pageSize=5&page=${newsPageNumber}&apiKey=0b1e1594e959400e9c6179dd16bd5369`;
 //   $.ajax({
