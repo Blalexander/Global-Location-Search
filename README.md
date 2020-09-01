@@ -7,7 +7,7 @@
 ![Screenshot1](/images/takemetherelanding.png)
 
 ## Top half of page after a search is done
-![Screenshot2](/images/takemetheretop.png)
+![Screenshot2](/images/takemtheretop.png)
 
 ## Bottom half of page after a search is done
 ![Screenshot3](/images/takemetherebottom.png)

@@ -180,6 +180,14 @@ form {
   font-size-adjust: 0.45;
 }
   
+#wikiTitle {
+  font-size: 1.5em;
+}
+
+#wikiDescription {
+  font-size: 1.2em;
+}
+
 #wikiLink {
   color: white;
   text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
@@ -201,6 +209,7 @@ form {
 .trendingNews {
   border-bottom: 3px solid rgba(0, 0, 0, .7);
   padding: 1vw;
+  font-size: 1.5em;
 }
   
 .newsArticleTitle {
@@ -255,7 +264,7 @@ h3 {
   margin: auto;
   font-weight: bold;
   text-align: center;
-  font-size-adjust: 1.5;
+  font-size: 1.5em;
   border-radius: 15px;
   border: none;
 }
@@ -265,7 +274,7 @@ h3 {
   width: 30vw;
   height: 4vh;
   border-radius: 15px;
-  font-size-adjust: .7;
+  font-size: 1.3em;
   font-family: 'DM Serif Text';
   background-color: rgba(0, 0, 0, .7);
   color: white;
