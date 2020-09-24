@@ -29,7 +29,13 @@ NewsAPI.org
 Wikipedia API
 
 ## Technology used
+
 * HTML
 * CSS
 * JavaScript
 * jQuery
+
+## Author
+
+* **Blake Alexander**
+* **BlakeAlexanderDev@gmail.com**
